@@ -4,7 +4,7 @@ Sistema de chat em tempo real com **implementação manual** de threading e prot
 
 ---
 
-## ✅ Requisitos Cumpridos com Código Manual
+## Requisitos Cumpridos com Código Manual
 
 | Requisito | Implementação Manual |
 |-----------|---------------------|
@@ -184,11 +184,11 @@ chat_distribuido/
 
 ## Diferencial deste Projeto
 
-- ✅ **Threading 100% manual** — nenhuma biblioteca abstrai a criação de threads
-- ✅ **Sockets puros** — `socket.socket()` + `accept()` + `recv()` + `send()`
-- ✅ **WebSocket do zero** — implementação completa do protocolo (RFC 6455)
-- ✅ **Web Worker** — única forma de ter thread de recepção no navegador
-- ✅ **Sem dependências externas** — apenas biblioteca padrão do Python
+- **Threading 100% manual** — nenhuma biblioteca abstrai a criação de threads
+- **Sockets puros** — `socket.socket()` + `accept()` + `recv()` + `send()`
+- **WebSocket do zero** — implementação completa do protocolo (RFC 6455)
+- **Web Worker** — única forma de ter thread de recepção no navegador
+- **Sem dependências externas** — apenas biblioteca padrão do Python
 
 ---
 
@@ -211,7 +211,7 @@ Para que a interface seja **acessível via navegador** (requisito do trabalho), 
 
 ## Autor(es)
 
-**[INSERIR NOME(S) E MATRÍCULA(S)]**  
+**[jadson,antonio,joshua**  
 Universidade Federal do Rio Grande — FURG  
 Sistemas Distribuídos · 2024
 # chat-test
