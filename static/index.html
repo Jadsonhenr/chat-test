@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Distribuído — FURG</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="login-screen" class="login-screen">
+        <div class="login-card">
+            <div class="login-logo">💬</div>
+            <h1>Chat Distribuído</h1>
+            <p class="login-subtitle">Sistemas Distribuídos · FURG · 2024</p>
+            <div id="login-error" class="error-msg hidden"></div>
+            <input type="text" id="username-input" placeholder="Seu nome de usuário…" maxlength="20" autocomplete="off" spellcheck="false">
+            <button id="login-btn" onclick="joinChat()">Entrar no Chat</button>
+            <div class="server-selector">
+                <label for="server-select">Servidor:</label>
+                <select id="server-select">
+                    <option value="primary">Principal  (porta 8765)</option>
+                    <option value="backup">Backup     (porta 8766)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="chat-screen" class="chat-screen hidden">
+        <header class="chat-header">
+            <div class="header-left">
+                <span class="header-logo">💬</span>
+                <div>
+                    <h2>Chat Distribuído</h2>
+                    <span id="server-status" class="server-status status-primary">● Servidor Principal</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span id="username-display" class="username-display"></span>
+                <button onclick="leaveChat()" class="leave-btn">Sair</button>
+            </div>
+        </header>
+        <div class="chat-layout">
+            <aside class="users-panel">
+                <h3>Online (<span id="user-count">0</span>)</h3>
+                <ul id="user-list"></ul>
+            </aside>
+            <main class="messages-area">
+                <div id="messages" class="messages"></div>
+                <div class="message-input-area">
+                    <div id="private-mode" class="private-badge hidden">
+                        <span id="private-target"></span>
+                        <button onclick="cancelPrivate()" title="Cancelar mensagem privada">✕</button>
+                    </div>
+                    <div class="input-row">
+                        <input type="text" id="msg-input" placeholder="Digite uma mensagem…" maxlength="500" autocomplete="off">
+                        <button id="send-btn" onclick="sendMessage()">Enviar ↵</button>
+                    </div>
+                    <div class="input-hint">Enter para enviar&nbsp;&nbsp;•&nbsp;&nbsp;Clique em ✉ para mensagem privada</div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="failover-notification" class="failover-notification hidden"><span>⚠ Reconectando ao servidor backup…</span></div>
+    <script src="/app.js"></script>
+</body>
+</html>

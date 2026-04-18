@@ -1,0 +1,19 @@
+"""
+config.py — Configurações do Sistema
+"""
+
+# Portas
+PRIMARY_WS_PORT    = 8765
+PRIMARY_HTTP_PORT  = 8080
+BACKUP_WS_PORT     = 8766
+BACKUP_HTTP_PORT   = 8081
+
+# Heartbeat
+HEARTBEAT_INTERVAL = 3
+HEARTBEAT_TIMEOUT  = 2.0
+MAX_FAILURES       = 3
+
+# Limites
+MAX_HISTORY       = 50
+MAX_USERNAME_LEN  = 20
+MAX_MSG_LEN       = 500

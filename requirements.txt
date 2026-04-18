@@ -1,0 +1,12 @@
+# requirements.txt — Dependências do Sistema de Chat Distribuído
+# ================================================================
+# Este projeto utiliza apenas a biblioteca padrão do Python 3.11+
+# Não há dependências externas a instalar.
+
+# Threading manual:      threading (stdlib)
+# Sockets puros:         socket (stdlib)
+# WebSocket protocol:    implementado manualmente em websocket_protocol.py
+# Servidor HTTP:         http.server (stdlib)
+# Requisições HTTP:      urllib.request (stdlib - heartbeat monitor)
+# JSON:                  json (stdlib)
+# Logging:               logging (stdlib)
